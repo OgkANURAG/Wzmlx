@@ -57,11 +57,11 @@ if UPGRADE_PACKAGES.lower() == 'true':
     packages = [dist.project_name for dist in working_set]
     scall("pip install " + ' '.join(packages), shell=True)
 
-UPSTREAM_REPO = environ.get('UPSTREAM_REPO', 'https://github.com/OgkANURAG/Wzmlx')
+UPSTREAM_REPO = environ.get('UPSTREAM_REPO', '')
 if len(UPSTREAM_REPO) == 0:
-    UPSTREAM_REPO = main
+    UPSTREAM_REPO = 'https://github.com/OgkANURAG/Wzmlx'
 
-UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', 'https://github.com/OgkANURAG/Wzmlx')
+UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', '')
 if len(UPSTREAM_BRANCH) == 0:
     UPSTREAM_BRANCH = 'main'
 
